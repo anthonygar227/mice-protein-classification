@@ -14,3 +14,10 @@ The final step asked which proteins the model leaned on, measured by how much ac
 It is important to state clearly what this does not show. The model demonstrates that these proteins are useful for predicting the group. It does not show that they cause anything. The importance of a predictive model is a statement about correlation and usefulness, not about biological mechanism. Proving causation would require controlled intervention, which a model trained on existing measurements cannot provide. The right way to describe the feature importance result is that the model's most useful proteins line up with known biology, which builds confidence that the model latched onto a real signal rather than noise.
 ## What I would do next
 The held-out test split and the cross-validation are both grouped by mouse, so every reported estimate is computed in the same honest way. Natural next refinements would be to compare the random forest against other model families, tune how many proteins to keep rather than fixing it at thirty, and report confidence intervals on the honest accuracy. None of these would change the core lesson of the project, which is that a careful split and a willingness to report a less flattering but truer number is worth more than a high score taken at face value.
+## How to run it
+The script downloads the dataset automatically from the UCI Machine Learning Repository, so no data file is needed.
+First install the required packages.
+pip install ucimlrepo scikit-learn pandas numpy
+Then run the script.
+python mice_protein_rf.py
+The script prints the baseline accuracy, the cross validated accuracy, the held out test accuracy, a per class performance report, and the ranked list of the proteins the model relied on most.
