@@ -1,4 +1,4 @@
-Predicting Mouse Experimental Group from Protein Expression
+#Predicting Mouse Experimental Group from Protein Expression
 What this project set out to answer
 This project uses the UCI Mice Protein Expression dataset, which records the expression levels of 77 proteins measured in the cerebral cortex of 1080 tissue samples. Every sample belongs to one of eight experimental groups. Those groups are built from three factors. The first is genotype, meaning a mouse is either a normal control or a trisomic model of Down syndrome. The second is treatment, meaning the mouse received either the drug memantine or a saline placebo. The third is behavior, meaning the mouse went through one of two learning tasks. The central question was whether the protein measurements alone carry enough information to recover which group a mouse belongs to, and if so, which proteins carry that signal. The deeper goal was never the accuracy number by itself. It was to learn whether protein expression encodes the underlying biological condition, and to do the analysis honestly enough that the result could be trusted.
 How the data was prepared
